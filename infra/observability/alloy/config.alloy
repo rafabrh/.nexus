@@ -1,0 +1,49 @@
+// Grafana Alloy config - scrapes all NEXUS services
+
+prometheus.scrape "nexus_api" {
+  targets    = [{ __address__ = "nexus-api:3001" }]
+  metrics_path = "/metrics"
+  bearer_token = env("METRICS_BEARER_TOKEN")
+  scrape_interval = "15s"
+}
+
+prometheus.scrape "nexus_engine" {
+  targets    = [{ __address__ = "nexus-engine:9090" }]
+  metrics_path = "/metrics"
+  bearer_token = env("METRICS_BEARER_TOKEN")
+  scrape_interval = "15s"
+}
+
+prometheus.scrape "rabbitmq" {
+  targets    = [{ __address__ = "rabbitmq:15692" }]
+  metrics_path = "/metrics"
+  scrape_interval = "30s"
+}
+
+prometheus.scrape "postgres" {
+  targets    = [{ __address__ = "postgres-exporter:9187" }]
+  metrics_path = "/metrics"
+  scrape_interval = "30s"
+}
+
+prometheus.scrape "redis" {
+  targets    = [{ __address__ = "redis-exporter:9121" }]
+  metrics_path = "/metrics"
+  scrape_interval = "15s"
+}
+
+prometheus.scrape "node" {
+  targets    = [{ __address__ = "node-exporter:9100" }]
+  metrics_path = "/metrics"
+  scrape_interval = "30s"
+}
+
+prometheus.scrape "cadvisor" {
+  targets    = [{ __address__ = "cadvisor:8080" }]
+  metrics_path = "/metrics"
+  scrape_interval = "30s"
+}
+
+prometheus.remote_write "mimir" {
+  endpoint { url = "http://mimir:9009/api/v1/push" }
+}

@@ -1,0 +1,10 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+grpcio==1.69.0
+grpcio-tools==1.69.0
+openai==1.59.7
+anthropic==0.42.0
+groq==0.13.1
+redis==5.2.1
+pydantic==2.10.5
+cockatiel==0.1.0

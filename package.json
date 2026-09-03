@@ -1,0 +1,18 @@
+{
+  "name": "nexus",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Event-driven microservices platform for WhatsApp AI agents",
+  "scripts": {
+    "dev": "pnpm -C apps/api dev & pnpm -C apps/web dev",
+    "build": "pnpm -C packages/shared build && pnpm -C apps/api build && pnpm -C apps/web build",
+    "test": "pnpm -C packages/shared test && pnpm -C apps/api test && pnpm -C apps/engine test",
+    "lint": "pnpm -C apps/api lint && pnpm -C apps/web lint",
+    "db:migrate": "pnpm -C apps/api db:migrate",
+    "db:generate": "pnpm -C apps/api db:generate"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  }
+}
