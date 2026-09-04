@@ -1,5 +1,5 @@
 <p align="center">
-<img alt="NEXUS" src="docs/assets/hero-nexus.png" width="100%" />
+<img alt="NEXUS" src="docs/assets/mecha-nexus.png" width="100%" />
 </p>
 
 <h1 align="center">NEXUS</h1>
