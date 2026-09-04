@@ -1,5 +1,5 @@
 <p align="center">
-<img width="1289" height="722" alt="Captura de tela 2026-08-28 210318" src="https://github.com/user-attachments/assets/ab3d9633-7d3c-45a8-b246-3e74a702f057" />
+<img alt="NEXUS" src="docs/assets/hero-nexus.png" width="100%" />
 </p>
 
 <h1 align="center">NEXUS</h1>
