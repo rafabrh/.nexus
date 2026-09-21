@@ -2,6 +2,8 @@
 <img alt="NEXUS" src="docs/assets/mecha-nexus.png" width="100%" />
 </p>
 
+https://nexus.shkgroup.com.br/login
+
 <h1 align="center">NEXUS</h1>
 
 <p align="center">
